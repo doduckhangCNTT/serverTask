@@ -1,0 +1,50 @@
+POST  http://localhost:5000/api/auth/register
+Content-Type: application/json 
+
+{
+  "username": "thang1234",
+  "password": "23456"
+}
+
+###
+
+POST  http://localhost:5000/api/auth/login
+Content-Type: application/json 
+
+{
+  "username": "khang",
+  "password": "123"
+}
+###
+
+POST  http://localhost:5000/api/posts
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVlYmQ0NWU2YmU1MjU3MzUxNDkwYjciLCJpYXQiOjE2NDM0NjE0Nzd9.5_CVJQkI59LpM4SLHfjl6WP5YLQq7wmcDssF2yvPFRk
+
+{
+  "title": "Nodejs123",
+  "description": "Reactjs123",
+  "url": "react.com",
+  "status": "LEARNED"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVlYmQ0NWU2YmU1MjU3MzUxNDkwYjciLCJpYXQiOjE2NDMzNzY0NTF9.QjgKAI2FWbo7dsl4c52FKiR_oert8zv4KzOrr3QfyCc
+
+###
+PUT http://localhost:5000/api/posts/61f53bd58d13cf4ad23e79ed
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVlYmQ0NWU2YmU1MjU3MzUxNDkwYjciLCJpYXQiOjE2NDM0NjE0Nzd9.5_CVJQkI59LpM4SLHfjl6WP5YLQq7wmcDssF2yvPFRk
+
+{
+  "title": "React",
+  "description": "Reactjs",
+  "url": "react.org",
+  "status": "LEARNING"
+}
+
+###
+DELETE http://localhost:5000/api/posts/61eed5ed5f3748f5a90aa6b5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVlYmQ0NWU2YmU1MjU3MzUxNDkwYjciLCJpYXQiOjE2NDMwOTgzNjJ9.cXCu4wjq1VfFZb31mmMaM4PmtFXH0YKx-VKIcT7MAq4
